@@ -5,6 +5,7 @@ const PORT = process.env.PORT || 8002;
 
 // declare all routes
 const userRoutes = require('./routes/userRoutes');
+const studentRoutes = require('./routes/studentRoutes');
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(express.json());
 
 //Routes
 app.use('/api/users', userRoutes);
+app.use('/api/students', studentRoutes);
 // app.use('/api/courses', courseRoutes);
 
 
